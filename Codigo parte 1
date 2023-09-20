@@ -1,0 +1,107 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class MyPanel extends JPanel {
+    private JTextArea jcomp1;
+    private JComboBox Accesos rápidos;
+    private JLabel jcomp3;
+    private JLabel jcomp4;
+    private JTextArea jcomp5;
+    private JLabel jcomp6;
+    private JLabel jcomp7;
+    private JTextField jcomp8;
+    private JButton jcomp9;
+    private JLabel jcomp10;
+    private JTextField jcomp11;
+    private JLabel jcomp12;
+    private JLabel jcomp13;
+    private JLabel jcomp14;
+    private JLabel jcomp15;
+    private JButton jcomp16;
+    private JRadioButton jcomp17;
+    private JLabel jcomp18;
+    private JTextArea jcomp19;
+
+    public MyPanel() {
+        //construct preComponents
+        String[] Accesos rápidosItems = {"Baños", "Auditorios", "Cafeteras", "Máquinas expendedoras", "Biblioteca", "Librerías"};
+
+        //construct components
+        jcomp1 = new JTextArea (5, 5);
+        Accesos rápidos = new JComboBox (Accesos rápidosItems);
+        jcomp3 = new JLabel ("ENCUÉNTRATE EAFIT");
+        jcomp4 = new JLabel ("Por favor elija el lugar al que desea ir:");
+        jcomp5 = new JTextArea (5, 5);
+        jcomp6 = new JLabel ("También puedes usar el buscador:");
+        jcomp7 = new JLabel ("Mapa interactivo");
+        jcomp8 = new JTextField (5);
+        jcomp9 = new JButton ("Compartir Mapa");
+        jcomp10 = new JLabel ("Opiniones y comentarios");
+        jcomp11 = new JTextField (5);
+        jcomp12 = new JLabel ("Horarios: Lunes - Viernes");
+        jcomp13 = new JLabel ("6am-9pm");
+        jcomp14 = new JLabel (" Sábados y Domingos");
+        jcomp15 = new JLabel ("6am-6pm");
+        jcomp16 = new JButton ("Centrar mapa");
+        jcomp17 = new JRadioButton ("Visualizar items no seleccionados");
+        jcomp18 = new JLabel ("Feedback y mejoras");
+        jcomp19 = new JTextArea (5, 5);
+
+        //adjust size and set layout
+        setPreferredSize (new Dimension (873, 560));
+        setLayout (null);
+
+        //add components
+        add (jcomp1);
+        add (Accesos rápidos);
+        add (jcomp3);
+        add (jcomp4);
+        add (jcomp5);
+        add (jcomp6);
+        add (jcomp7);
+        add (jcomp8);
+        add (jcomp9);
+        add (jcomp10);
+        add (jcomp11);
+        add (jcomp12);
+        add (jcomp13);
+        add (jcomp14);
+        add (jcomp15);
+        add (jcomp16);
+        add (jcomp17);
+        add (jcomp18);
+        add (jcomp19);
+
+        //set component bounds (only needed by Absolute Positioning)
+        jcomp1.setBounds (-205, 215, 100, 75);
+        Accesos rápidos.setBounds (370, 45, 100, 25);
+        jcomp3.setBounds (370, -20, 195, 70);
+        jcomp4.setBounds (150, 40, 245, 35);
+        jcomp5.setBounds (155, 110, 410, 30);
+        jcomp6.setBounds (155, 80, 215, 25);
+        jcomp7.setBounds (680, 120, 100, 25);
+        jcomp8.setBounds (155, 150, 620, 330);
+        jcomp9.setBounds (15, 15, 135, 25);
+        jcomp10.setBounds (10, 430, 150, 25);
+        jcomp11.setBounds (10, 460, 115, 25);
+        jcomp12.setBounds (675, 0, 240, 30);
+        jcomp13.setBounds (675, 70, 100, 25);
+        jcomp14.setBounds (670, 45, 175, 30);
+        jcomp15.setBounds (675, 25, 100, 25);
+        jcomp16.setBounds (650, 485, 125, 30);
+        jcomp17.setBounds (645, 525, 225, 25);
+        jcomp18.setBounds (10, 485, 130, 30);
+        jcomp19.setBounds (10, 510, 115, 25);
+    }
+
+
+    public static void main (String[] args) {
+        JFrame frame = new JFrame ("MyPanel");
+        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add (new MyPanel());
+        frame.pack();
+        frame.setVisible (true);
+    }
+}
